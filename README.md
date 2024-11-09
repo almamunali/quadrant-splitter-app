@@ -1,57 +1,42 @@
-# Getting Started with Create React App
+# Quadrant Splitter Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This React component allows users to split a viewport-covering quadrant into four unique sub-quadrants, each with a different color, upon click. Each click on any quadrant recursively divides it further into four sub-quadrants.
 
-## Available Scripts
+## Features
+- **Quadrant Splitting**: Click any quadrant to split it into four equally sized sub-quadrants.
+- **Unique Colors**: Ensures each quadrant has a unique color that differs from its immediate siblings.
+- **Initial Centered Display**: By default, the initial quadrant fills the entire viewport.
 
-In the project directory, you can run:
+## Demo
+Here’s how it works:
+1. The main screen starts with one full-size quadrant.
+2. When clicked, each quadrant splits into four sub-quadrants, each with its own unique color.
 
-### `npm start`
+## Code Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **`Quadrant` Component**: 
+   - Displays a single quadrant.
+   - Listens for click events to trigger quadrant splitting.
 
-### `npm run build`
+2. **`QuadrantSplitter` Component**:
+   - Manages quadrant states, including color , position , width and height.
+   - Implements unique color generation and quadrant splitting logic.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Key Functions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **`getRandomColor`**: Generates a random color in hexadecimal format.
+- **`generateUniqueColors`**: Ensures each split produces four unique colors, avoiding duplication among sibling quadrants.
+- **`handleQuadrantClick`**: Calculates click position, splits the quadrant into four new quadrants, and assigns unique colors to each.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Usage
 
+To integrate this component:
+1. Clone the repository.
+2. Install dependencies with:
+3. Start the app with
+   ```bash
+   npm install
+   npm start
 
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
