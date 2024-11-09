@@ -40,4 +40,5 @@ To integrate this component:
    npm install
    npm start
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+This will let users know that when they run the app locally, it will be available on port 3000 by default.
