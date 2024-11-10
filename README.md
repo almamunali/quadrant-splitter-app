@@ -3,7 +3,7 @@
 This React component allows users to split a viewport-covering quadrant into four unique sub-quadrants, each with a different color, upon click. Each click on any quadrant recursively divides it further into four sub-quadrants.
 
 ## Features
-- **Quadrant Splitting**: Click any quadrant to split it into four equally sized sub-quadrants.
+- **Quadrant Splitting**:  Each of the quadrants should maintain a common corner at the point where the mouse was clicked. This means that the quadrant is not split into 4 equally sized squares, but into 4 rectangles with different sizes .
 - **Unique Colors**: Ensures each quadrant has a unique color that differs from its immediate siblings.
 - **Initial Centered Display**: By default, the initial quadrant fills the entire viewport.
 
